@@ -1,0 +1,35 @@
+<section class="bg-[url('./images/Image.png')] bg-center bg-cover h-screen w-full">
+    <div class="container mx-auto flex items-center w-full">
+        <div class="hero-content w-1/2 relative ml-16 text-white">
+          <h1 class="text-5xl font-bold absolute top-60">It's the Food and Groceries you love, delievered</h1>
+          <p class="text-2xl font-semibold absolute top-[25rem]">Experience the convenience of grocery delivery in your neighborhood</p>
+          <a href="#" class="text-xl font-bold absolute top-[32rem] left-[2rem] px-8 py-3 bg-yellow-300 hover:bg-transparent hover:text-white duration-300 hover:border-yellow-300 hover:border border border-transparent rounded-3xl">Order Now</a>
+        </div>
+        <div class="w-1/2 relative">
+          <img class="absolute top-[4.5rem] left-[2.5rem]" src="/images/grocery-image.png">
+        </div>
+      </div>
+</section>
+<!-- product items -->
+<section class="products bg-[url('./images/Image.png')] bg-center bg-cover">
+  <div class="container mx-auto">
+    <h2 class="text-4xl font-bold py-10 text-center text-white mb-16">Selling products</h2>
+    <div class="grid grid-cols-4 gap-10"> 
+      <% productItems.forEach(function(product){%>
+       <div class="flex flex-col justify-center items-center">
+        <img class="w-60 h-60 rounded-md" src="/images/<%= product.image%>">
+        <span class="text-lg text-white font-bold mt-3 "><%= product.name %></span>
+        <span  class="text-lg text-white font-bold mt-3">Category: <%= product.category%></span>
+        <h1 class="text-lg text-white font-bold mt-3 pl-2 text-center"><%= product.description%></h1>
+        <div class="unit text-white text-lg rounded-md py-1 px-3 my-3"><%= product.unit%></div>
+
+       <div>
+        <span class="text-lg text-white font-bold text-primary"><%= product.price%></span>
+         <span class="stock text-lg text-white font-bold text-primary"><%= product.stock%></span>
+        <button class="add-to-cart text-white mt-2 py-1.5 px-3 rounded-3xl  bg-yellow-300 hover:bg-transparent hover:text-white duration-300 hover:border-yellow-300 hover:border border border-transparent  ml-6 text-small">Add to Cart</button>
+       </div>
+      </div>
+     <% }) %>
+    </div>
+    </div>
+      </section>

@@ -1,0 +1,14 @@
+@import 'variables';
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.btn-primary{
+    background-color: yellow;
+    color:white;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        background-color:black;
+    }
+}

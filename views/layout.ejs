@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Grocify</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  </head>
+  <body>
+   <nav class="container bg-[url('./images/Image.png')] bg-center bg-cover  px-28 py-5 w-full ">
+    <div class="flex items-center w-full">
+      <a href="/"> <img src="./images/logo.png" class="w-40 cursor-pointer"></a>
+     
+      <ul class="flex-1 text-center">
+        <li class="list-none inline-block px-5"><a href="/" class="no-underline text-white px-2">HOME</a></li>
+        <li class="list-none inline-block px-5"><a href="#footer" class="no-underline text-white px-2">About</a></li>
+        <li class="list-none inline-block px-5"><a href="/login" class="no-underline text-white px-2">login</a></li>
+        <li class="list-none inline-block px-5"><a href="/register" class="no-underline text-white px-2">Register</a></li>
+        <li class="list-none inline-block px-5"><a href="/items" class="no-underline text-white px-2">Items</a></li>
+      </ul>
+      <a href="/cart"><img src="./images/cart.png" class="w-8 cursor-pointer"></a>
+     
+    </div>
+  </nav>
+  <%- body %>
+
+  <!-- footer -->
+  <footer id="footer" class=" text-white py-10 bg-[url('./images/Image.png')]">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-5 mt-8">
+      
+      <!-- About Us Column -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">About Us</h3>
+        <p class="text-gray-400 text-sm">
+          We offer fresh and organic groceries delivered right to your door. Quality and convenience at the best prices.
+        </p>
+      </div>
+      
+      <!-- Customer Service Column -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Customer Service</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-400 text-sm hover:text-gray-200">Contact Us</a></li>
+          <li><a href="#" class="text-gray-400 text-sm hover:text-gray-200">Returns</a></li>
+          <li><a href="#" class="text-gray-400 text-sm hover:text-gray-200">Shipping</a></li>
+          <li><a href="#" class="text-gray-400 text-sm hover:text-gray-200">FAQs</a></li>
+        </ul>
+      </div>
+      
+      <!-- Information Column -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Information</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-400 text-sm hover:text-gray-200">About Our Store</a></li>
+          <li><a href="#" class="text-gray-400 text-sm hover:text-gray-200">Privacy Policy</a></li>
+          <li><a href="#" class="text-gray-400 text-sm hover:text-gray-200">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      
+      <!-- Follow Us Column -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-400 hover:text-gray-200 text-xl">
+            <i class="fab fa-facebook-f"></i> <!-- Placeholder icon, replace with actual icon library -->
+          </a>
+          <a href="#" class="text-gray-400 hover:text-gray-200 text-xl">
+            <i class="fab fa-twitter"></i> <!-- Placeholder icon -->
+          </a>
+          <a href="#" class="text-gray-400 hover:text-gray-200 text-xl">
+            <i class="fab fa-whatsapp"></i> <!-- Placeholder icon -->
+          </a>
+          <a href="#" class="text-gray-400 hover:text-gray-200 text-xl">
+            <i class="fab fa-instagram"></i> <!-- Placeholder icon -->
+          </a>
+          <a href="#" class="text-gray-400 hover:text-gray-200 text-xl">
+            <i class="fab fa-linkedin"></i> <!-- Placeholder icon -->
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Copyright Section -->
+    <div class="bg-gray-900 py-4 mt-8 text-center">
+      <p class="text-gray-500 text-sm">&copy; 2024 Grocery Store. All rights reserved.</p>
+    </div>
+  </footer>
+
+  
+  </body>
+</html>
