@@ -7,14 +7,25 @@
     "sass": "sass --watch public/scss:public/stylesheets"
   },
   "dependencies": {
+    "connect-mongo": "^5.1.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "dotenv": "^16.4.5",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "express-ejs-layouts": "^2.5.1",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.18.1",
     "http-errors": "~1.6.3",
     "mongoose": "^8.7.3",
     "morgan": "~1.9.1",
     "sass": "^1.80.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "babel-loader": "^9.2.1",
+    "cross-env": "^7.0.3",
+    "laravel-mix": "^6.0.49"
   }
 }
