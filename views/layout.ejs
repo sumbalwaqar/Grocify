@@ -6,23 +6,37 @@
   <link rel='stylesheet' href='/stylesheets/style.css' />
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.2.0-beta/noty.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.2.0-beta/themes/mint.min.css">
 </head>
 
 <body>
-  <nav class="container bg-[url('./images/Image.png')] bg-center bg-cover  px-28 py-5">
+  <nav class="container bg-[url('./images/Image.png')] bg-center bg-cover px-28 py-5">
     <div class="flex items-center w-full">
       <a href="/"> <img src="./images/logo.png" class="w-40 cursor-pointer"></a>
 
       <ul class="flex-1 text-center">
-        <li class="list-none inline-block px-5"><a href="/" class="no-underline text-white px-2">HOME</a></li>
-        <li class="list-none inline-block px-5"><a href="#footer" class="no-underline text-white px-2">About</a></li>
-        <li class="list-none inline-block px-5"><a href="/login" class="no-underline text-white px-2">login</a></li>
-        <li class="list-none inline-block px-5"><a href="/register" class="no-underline text-white px-2">Register</a>
+        <li class="list-none inline-block px-5"><a href="/" class="no-underline text-white py-2">HOME</a></li>
+        <li class="list-none inline-block px-5"><a href="#footer" class="no-underline text-white py-2">About</a></li>
+        <li class="list-none inline-block px-5"><a href="/#menu" class="no-underline text-white py-2">Items</a></li>
+        <% if (user) {%>
+        <li class="inline-block">
+          <form id="logout" action="/logout" method="post">
+          <a onclick="document.getElementById('logout').submit()" href="#" type="submit" class="text-white">Logout</a>
+        </form>
         </li>
-        <li class="list-none inline-block px-5"><a href="/items" class="no-underline text-white px-2">Items</a></li>
+        <% } else {%>
+        <li class="list-none inline-block px-5"><a href="/login" class="no-underline text-white py-2">login</a></li>
+        <li class="list-none inline-block px-5"><a href="/register" class="no-underline text-white py-2">Register</a>
+        </li>
+      
+        <% } %>
       </ul>
-      <a href="/cart"><img src="./images/cart.png" class="w-8 cursor-pointer"></a>
-
+      <a href="/cart">
+        <span id="cartCounter" class="text-white text-sm">
+          <%=session.cart ? session.cart.totalQty : '' %>
+        </span>
+        <img src="./images/cart.png" class="w-8 cursor-pointer"></a>
     </div>
   </nav>
   <%- body %>

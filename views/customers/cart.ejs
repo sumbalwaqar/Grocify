@@ -1,87 +1,65 @@
-<section class="cart py-16  text-white bg-[url('./images/Image.png')] bg-center bg-cover">
-    <div class="empty-cart py-16">
-        <div class="container mx-auto text-center">
+<section class="cart py-16 bg-black text-white">
+  <div class="order container mx-auto w-1/2">
+    <%if(session.cart){%>
+      <div class="flex items-center border-b border-gray-300 pb-4">
+        <img src="/images/cart-black.jpg" alt="" />
+        <h1 class="font-bold ml-4 text-2xl">Order Summary</h1>
+      </div>
+      <div class="food-list">
+        <% for (let food of Object.values(session.cart.items)) { %>
+          <div class="flex items-center my-8">
+            <img class="w-24" src="/images/<%= food.item.image %>" alt="" />
+            <div class="flex-1 ml-4">
+              <h1>
+                <%= food.item.name %>
+              </h1>
+              <span>
+                <%= food.item.unit %>
+              </span>
+            </div>
+            <span class="flex-1">
+              <%= food.qty %> Pcs
+            </span>
+            <span class="font-bold text-lg">$<%= food.item.price * food.qty %></span>
+            
+          </div>
+          <% } %>
+            <hr />
+            <div class="text-right py-4">
+              <div>
+                <span class="text-lg font-bold">Total Amount:</span>
+                <span class="amount font-bold text-2xl ml-4">$<%=session.cart.totalprice%></span>
+              </div>
+              <div>
+                <form class="mt-12" action="">
+                  <input class="border border-gray-400 p-2 w-1/2 mb-4" type="tel" placeholder="Phone Number" />
+                  <input class="border border-gray-400 p-2 w-1/2 mb-4" type="tel" placeholder="Address" />
+                  <div>
+                    <button class="btn-primary px-6 py-2 rounded-full mt-6" type="submit">
+                      Order Now
+                    </button>
+                  </div>
+                  <!-- <a
+                href=""
+                class="inline-block cursor-pointer px-6 py-2 btn-primary rounded-full mt-6"
+                >Login to continue</a
+              > -->
+                </form>
+              </div>
+            </div>
+      </div>
+      <%}else{%>
+        <div class="empty-cart py-16">
+          <div class="container mx-auto text-center">
             <h1 class="text-3xl font-bold mb-2">Cart Empty😔</h1>
             <p class="capitalize text-gray-500 text-lg mb-8">
-                You Probably havn't Order anything Yet. <br />
-                To Order a groceries go to main page
+              You Probably havn't Order any item Yet. <br />
+              To Order go to main page
             </p>
-            <img class="mx-auto w-40" src="/images/empty-cart.png" alt="Empty Cart" />
-            <a href="/"
-                class=" inline-block px-6 py-2 mt-8 text-white  rounded-3xl  bg-yellow-300 hover:bg-transparent hover:text-white duration-300 hover:border-yellow-300 hover:border border border-transparent text-small">Go
-                Back</a>
+            <img class="mx-auto w-1/8" src="/images/empty-cart.png" alt="Empty Cart" />
+            <a href="/" class="btn-primary inline-block px-6 py-2 rounded-full mt-8">Go Back</a>
+          </div>
         </div>
-    </div>
-  
-  
-    <!-- <section class=" text-white bg-[url('./images/Image.png')] bg-center bg-cover"> 
-    <div class="order container mx-auto w-1/2">
-        <div class="flex items-center border-b border-gray-300 pb-4">
-          <img src="/images/cart-black.jpg" alt="" />
-          <h1 class="font-bold ml-4 text-2xl mt-6">Order Summary</h1>
-        </div>
-        <div class="pizza-list">
-          <div class="flex items-center my-8">
-            <img class="w-24" src="/images/mangoes.jpg" alt="" />
-            <div class="flex-1 ml-4">
-              <h1>Mangoes</h1>
-            </div>
-            <span class="flex-1">1kg</span>
-            <span class="font-bold text-lg">$30</span>
-          </div>
-          <div class="flex items-center my-8">
-            <img class="w-24" src="/images/mangoes.jpg" alt="" />
-            <div class="flex-1 ml-4">
-              <h1>Mangoes</h1>
-            
-            </div>
-            <span class="flex-1">1kg</span>
-            <span class="font-bold text-lg">$30</span>
-          </div>
-          <div class="flex items-center my-8">
-            <img class="w-24" src="/images/mangoes.jpg" alt="" />
-            <div class="flex-1 ml-4">
-              <h1>Mangoes</h1>
-             
-            </div>
-            <span class="flex-1">1kg</span>
-            <span class="font-bold text-lg">$30</span>
-          </div>
-          <hr />
-          <div class="text-right py-4">
-            <div>
-              <span class="text-lg font-bold">Total Amount:</span>
-              <span class="amount font-bold text-2xl ml-4">$300</span>
-            </div>
-            <div>
-              <form class="mt-12" action="">
-                <input
-                  class="border border-gray-400 p-2 w-1/2 mb-4"
-                  type="tel"
-                  placeholder="Phone Number"
-                />
-                <input
-                  class="border border-gray-400 p-2 w-1/2 mb-4"
-                  type="tel"
-                  placeholder="Address"
-                />
-                <div>
-                  <button
-                    class="btn-primary px-6 py-2  mt-6 inline-block text-white  rounded-3xl  bg-yellow-300 hover:bg-transparent hover:text-white duration-300 hover:border-yellow-300 hover:border border border-transparent text-small"
-                    type="submit"
-                  >
-                    Order Now
-                  </button>
-                </div>  -->
-    <!-- <a
-                  href=""
-                  class="inline-block cursor-pointer px-6 py-2  text-white  rounded-3xl  bg-yellow-300 hover:bg-transparent hover:text-white duration-300 hover:border-yellow-300 hover:border border border-transparent text-small mt-6"
-                  >Login to continue</a> -->
-
-    </form>
-    </div>
-    </div>
-    </div>
-    </div>
-</section>
+        <% } %>
+  </div>
 </section>

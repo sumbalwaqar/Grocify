@@ -1,0 +1,93 @@
+[
+    {
+      "name": "Organic Bananas",
+      "category": "Fruits",
+      "description": "Fresh organic bananas sourced from local farms.",
+      "price": 1.5,
+      "unit": "lb",
+      "stock": 200,
+      "imageURL": "bananas.jpg"
+    },
+    {
+      "name": "Whole Milk",
+      "category": "Dairy",
+      "description": "Rich and creamy whole milk from grass-fed cows.",
+      "price": 3.0,
+      "unit": "gallon",
+      "stock": 150,
+      "imageURL": "whole_milk.jpg"
+    },
+    {
+      "name": "Organic Free-Range Eggs",
+      "category": "Dairy",
+      "description": "Organic eggs from free-range hens.",
+      "price": 4.5,
+      "unit": "dozen",
+      "stock": 100,
+      "imageURL": "https://example.com/images/eggs.jpg"
+    },
+    {
+      "name": "Almond Butter",
+      "category": "Condiments",
+      "description": "Smooth almond butter made from organic almonds.",
+      "price": 8.0,
+      "unit": "jar",
+      "stock": 50,
+      "imageURL": "almond_butter.jpg"
+    },
+    {
+      "name": "Whole Wheat Bread",
+      "category": "Bakery",
+      "description": "Freshly baked whole wheat bread with a soft texture.",
+      "price": 2.5,
+      "unit": "loaf",
+      "stock": 80,
+      "imageURL": "whole_wheat_bread.jpg"
+    },
+    {
+      "name": "Broccoli",
+      "category": "Vegetables",
+      "description": "Fresh broccoli, perfect for steaming or roasting.",
+      "price": 1.75,
+      "unit": "lb",
+      "stock": 120,
+      "imageURL": "broccoli.jpg"
+    },
+    {
+      "name": "Extra Virgin Olive Oil",
+      "category": "Condiments",
+      "description": "Premium extra virgin olive oil, cold-pressed for quality.",
+      "price": 12.0,
+      "unit": "bottle",
+      "stock": 60,
+      "imageURL": "olive_oil.jpg"
+    },
+    {
+      "name": "Brown Rice",
+      "category": "Grains",
+      "description": "Healthy and organic brown rice.",
+      "price": 3.0,
+      "unit": "lb",
+      "stock": 100,
+      "imageURL": "brown_rice.jpg"
+    },
+    {
+      "name": "Chicken Breast",
+      "category": "Meat",
+      "description": "Boneless and skinless chicken breast, perfect for grilling.",
+      "price": 5.5,
+      "unit": "lb",
+      "stock": 75,
+      "imageURL": "chicken_breast.jpg"
+    },
+    {
+      "name": "Salmon Fillet",
+      "category": "Seafood",
+      "description": "Fresh Atlantic salmon fillets, rich in omega-3s.",
+      "price": 10.0,
+      "unit": "lb",
+      "stock": 50,
+      "imageURL": "salmon.jpg"
+    }
+  ]
+  

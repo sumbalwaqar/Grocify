@@ -1,9 +1,12 @@
-@import 'variables';
 
+@import "node_modules/noty/lib/noty.css";
+@import "node_modules/noty/lib/themes/mint.css";
 body{
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
+
+
 .btn-primary{
     background-color: yellow;
     color:white;
